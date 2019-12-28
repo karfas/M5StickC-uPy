@@ -1,0 +1,6 @@
+[submodule "WiFiManager"]
+	path = WiFiManager
+	url = https://github.com/tayfunulu/WiFiManager.git
+[submodule "ftp_server"]
+	path = ftp_server
+	url = https://github.com/robert-hh/FTP-Server-for-ESP8266-ESP32-and-PYBD.git

@@ -12,20 +12,30 @@ import time
 #
 try:
     del sys.modules["app"]
+    del sys.modules["webrepl"]
+    del sys.modules["uftpd"]
 except:
     pass
 
+
+def startup_net():
+    print("start uftpd")
+    import uftpd 	# implicit starts the server
+    # uftpd.start(port=21, verbose=1, splash=True)
+
+    print("start webrepl")
+    import webrepl
+    webrepl.start(password="secret")
+
 try:
     print("start wifi manager")
-    import wifi_manager
-    sta_if = wifi_manager.get_connection()
+    import wifimgr
+    sta_if = wifimgr.get_connection()
     if sta_if is None:
-        wifi_manager.start()
+        wifimgr.start()
 
     if sta_if.isconnected():
-        print("connected: {}".format(sta_if.ifconfig()))
-        import webrepl
-        webrepl.start(password="secret")
+        startup_net()
     else:
         print("no network, skip weprepl start")
 

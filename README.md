@@ -4,7 +4,10 @@ Micropython utilities for the M5StickC.
 
 ## Contents:
 
-- main.py: For development. Initializes WIFI (using a wifi_manager) and starts the WEBREPL server.
+- main.py: For development. 
+  - Initializes WIFI (using a wifi_manager) 
+  - Starts the WEBREPL server.
+  - Starts the ftp server.
 - app.py: Testbed for the other modules.
 - m5stickc.py: first steps for a high-level interface to the M5StickC hardware.
   Provides:
@@ -31,4 +34,8 @@ import app.py
 app.run()
 ```
 
+## Credits:
+
+tayfununlu's WifiManager: https://github.com/tayfunulu/WiFiManager
+robert-hh's ftp server: https://github.com/robert-hh/FTP-Server-for-ESP8266-ESP32-and-PYBD.git
 
