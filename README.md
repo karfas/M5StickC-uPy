@@ -21,3 +21,14 @@ Micropython utilities for the M5StickC.
 ## Usage:
 
 Please see app.py and m5stickc.py for example usage.
+
+### For a fast try:
+- install micropython on your M5StickC
+- copy app.py, m5stickc.py and axp192.py to your device.
+- open a terminal session and enter
+
+```
+import app.py
+app.run()
+```
+
