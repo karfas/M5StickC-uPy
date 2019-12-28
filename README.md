@@ -16,7 +16,6 @@ Micropython utilities for the M5StickC.
   - the `LightSleep()` and `DeepSleep()` functions. 
     In my opinion, these shouldn't be part of the AXP192 interface, anyway.
     The (provided) `set_sleep()` turns off most outputs, but doesn't put the ESP32 into sleep.
-    These don't belong to the AXP192 interface, anyway.
 
 ## Usage:
 
@@ -31,4 +30,5 @@ Please see app.py and m5stickc.py for example usage.
 import app.py
 app.run()
 ```
+
 
